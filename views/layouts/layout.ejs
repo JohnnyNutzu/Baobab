@@ -16,11 +16,11 @@
   <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
   <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
   <script defer src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
-  <link id="main-css" rel="stylesheet" href="/stylesheets/main.css">
+  <link id="main-css" rel="stylesheet" href="stylesheets/main-css">
   <title>Baobab</title>
 </head>
 <body>
-  <div class="container">
+  <div class="baobab">
     <%- include('../partials/header.ejs') %>
     <div class="inner-container">
       <%- include('../partials/errorMessage.ejs') %>
@@ -28,4 +28,7 @@
     </div>
   </div>
 </body>
+<div>
+<%- include('../partials/footer.ejs') %>
+</div>
 </html>

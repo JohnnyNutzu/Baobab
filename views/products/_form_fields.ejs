@@ -9,10 +9,7 @@
        value="<%= product.date == null ? '': 
        product.date.toISOString().split('T')[0]  %>">
 </div>
-<div>
-    <label>Image</label>
-    <input type="file" name="cover" class="filepond">
-</div>
+
 <div>
     <label>Description</label>
     <textarea name="description"><%= product.description  %>  </textarea>

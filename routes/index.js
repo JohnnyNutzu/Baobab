@@ -3,7 +3,7 @@ const router = express.Router()
 const Product = require('../models/product')
 
 router.get('/', async (req, res) => {
-  let products
+  let products;
   try {
     products = await Product.find().sort({ Date: 'desc' }).limit(10).exec()
   } catch {
