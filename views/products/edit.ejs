@@ -1,8 +1,18 @@
-<h2 class="page-header">Edit Product/h2>
-<form action="/products/<%= product.id %>?_method=PUT" method="POST">
-  <%- include('_form_fields') %>
-  <div class="form-row form-row-end btn-row">
-    <a class="btn btn-danger" href="/products">Cancel</a>
-    <button class="btn btn-primary" type="submit">Update</button>
-  </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div>
+        <form action="/products/<%= product.id  %>?_method=PUT " method="POST">
+            <label for="title">Product Title</label>
+            <input type="text" id="title" name="title" required>
+            <label for="body">Product Description</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

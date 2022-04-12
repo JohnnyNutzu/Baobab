@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container">
+    <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+                <h5 class="text-center"><%= product.title %></h5>
+              <p class="card-text text-center"><%= product.description %></p>
+              
+              <a href='/products/edit/'>Edit</a>
+              <%- include('../partials/deleteForm',
+                { url: `/products/${product.id}` }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+</body>
+
+</html>

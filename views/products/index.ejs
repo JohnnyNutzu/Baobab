@@ -1,20 +1,29 @@
-<h2 class="page-header">Search Product</h2>
-<form action="/products" method="GET">
-  <div class="form-row">
-    <div class="form-item">
-      <label>Title</label>
-      <input type="text" name="title" value="<%= searchOptions.title %>">
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container baobab">
+        <h2 class="text-center bg-dark text-white rounded-pill">Our Cakes</h2>
+        
+            <div class="row row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <% products.forEach(product => { %>
+                <div class="p-3 col">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+    
+                        <div class="card-body">
+                            <a href="products/<%= product._id  %> "><button type="button" class="btn btn-outline-info"><h4><%= product.title  %></h4></button></a>
+    
+                            <p class="card-text"><%= product.description %></p>
+                            <a href="#" class="btn btn-primary">Order now</a>
+                        </div>
+                      </div>
+                </div> 
+                <% }) %>
+                
+            </div>
+       
     </div>
-  </div>
-  <div class="form-row">
-    <div class="form-item">
-      <label>Published After</label>
-      <input type="date" name="date" value="<%= searchOptions.date %>">
-    </div>
-  </div>
-  <div class="form-row form-row-end">
-    <button class="btn btn-primary" type="submit">Search</button>
-  </div>
-</form>
-<br>
-<%- include('../partials/productGrid', { products: products, large: true }) %>
+</body>
+<%- include('../partials/footer.ejs') %>
+</html>

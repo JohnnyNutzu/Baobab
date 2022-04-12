@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    
+<!--Login and user authentification  -->
+
+<div id="bgauth" class="container mt-5">
+    <div class="row">
+        <div class="col align-self-center">
+            <div class="card" style="border:none">
+                <form method="post" action="/login" class="box">
+                    <h1>Login</h1>
+                      <p class="text-danger text-muted"> Please enter your login and password!</p>
+                      <!--Username--> 
+                      <input id="username" type="text" name="name" placeholder="name">
+                      <!--Password-->  
+                      <input id="password" type="password" name="password" placeholder="Password"> 
+                      <a class="forgot text-muted" href="#">Forgot password?</a>
+                      <div class="vr"></div>
+                      <a class="forgot text-muted" href="/register">Sign up</a>
+                      
+                      <input type="submit" name="" value="Login" href="#">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--information before footer -->
+    <div class="container-fluid mt-5" style="width:100%;">
+        <figure class="text-end">
+            <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+        </figure>
+    </div>
+</div>
+</body>
+</html>
