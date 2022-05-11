@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container">
+        <% if (message) { %>
+            <div style="text-align: center" class="alert alert-<%= message.type %>">
+                <strong><%= message.intro %></strong><strong><%= message.message %></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+        <h2 class="text-center bg-dark text-white rounded-pill">Blog-Hub</h2>
+        <% blogs.forEach(blog=>{ %>
+            <div class="col-lg-6 card mt-2 mr-0">
+                <div class="row p-2">
+                    <div class="col-5 overflow-hidden">
+                        <img src="../../uploads/<%= blog.img %> " class="card-img" alt="...">
+                    </div>
+                    <div class="col-7">
+                        <div class="d-flex align-items-start">
+                           <a href="blogs/<%= blog._id  %> "> <h5 class="w-100"><b> <%= blog.title %> </b></h5></a>
+                           <h6><%= blog.description %></h6>
+
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+            <% }) %>  
+
+    </div>
+</body>
+</html>

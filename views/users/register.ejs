@@ -3,7 +3,12 @@
     <%- include('../partials/head.ejs') %>
 <body>
 <!--Register and user authentification  -->
-
+<% if (message) { %>
+    <div style="text-align: center" class="alert alert-<%= message.type %>">
+        <strong><%= message.intro %></strong><strong><%= message.message %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
 <div id="bgauth" class="container mt-5">
     <div class="row">
         <div class="col align-self-center">
@@ -31,10 +36,10 @@
     <div class="container-fluid mt-5" style="width:100%;">
         <figure class="text-end">
             <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
+            <p>Stay connected and support our community</p>
             </blockquote>
             <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Mother <cite title="Source Title">Bolera</cite>
         </figcaption>
         </figure>
     </div>

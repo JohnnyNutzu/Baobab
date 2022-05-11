@@ -5,7 +5,14 @@
     
 <!--Login and user authentification  -->
 
+
 <div id="bgauth" class="container mt-5">
+    <% if (message) { %>
+        <div style="text-align: center" class="alert alert-<%= message.type %>">
+            <strong><%= message.intro %></strong><strong><%= message.message %></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
     <div class="row">
         <div class="col align-self-center">
             <div class="card" style="border:none">
@@ -30,10 +37,10 @@
     <div class="container-fluid mt-5" style="width:100%;">
         <figure class="text-end">
             <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
+            <p>Sign with us and get 20% discount</p>
             </blockquote>
             <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Baobab <cite title="Source Title">Bakery</cite>
         </figcaption>
         </figure>
     </div>

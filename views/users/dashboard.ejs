@@ -2,17 +2,76 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('../partials/nav.ejs') %>
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <h3>My name is <%= user.name %> </h3> &nbsp;
-        <h3>I stay at <%= user.location %> </h3> <br>
+<div class="fluid-container">
+    <% if (message) { %>
+      <div style="text-align: center" class="alert alert-<%= message.type %>">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <strong><%= message.intro %></strong><%= message.message %>
+      </div>
+    <% } %>
+    <div>
+      <div class="profile-icon">
+        <h4>Welcome</h4>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <i class="fas fa-user-astronaut f4fb fa-2x"></i>
+      </button>
+      <h4><%= user.name %> </h4>
+      </div>
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Hi, <%= user.name %> </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            You got 20% off from your first order! Help us help children in Africa.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Profile
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Add Blog</a></li>
+              <li><a class="dropdown-item" href="#">Place your Order</a></li>
+              <li><a class="dropdown-item" href="#">Donate</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<div>
-    <a href="/logout"> <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Logout</button> </a>
+   <div class="menu-container">
+    <ul class="menu">
+        <li>
+            <a href="/cakes">
+                <span class="icon">Baobab Bakery</span>
+                <div class="content">
+                    <h2 class="main">Happy times</h2>
+                    <h3 class="sub">Personalize your cake</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/community">
+                <span class="icon">Baobab Hub</span>
+                <div class="content">
+                    <h2 class="main">Donate and Support</h2>
+                    <h3 class="sub">Every order helps our community</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/">
+                <span class="icon">Blog Story</span>
+                <div class="content">
+                    <h2 class="main">Stay Connected</h2>
+                    <h3 class="sub">Don't forget to smile</h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+   </div> 
 </div>
 </body>
 </html>

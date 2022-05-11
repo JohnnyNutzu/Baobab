@@ -9,7 +9,6 @@ const loginCheck = passport => {
   passport.use(
     new LocalStrategy({ usernameField: "name" }, (name, password, done) => {
       //Check customer
-
       User.findOne({ name:name })
         .then((user) => {
           if (!user) {

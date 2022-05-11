@@ -1,34 +1,35 @@
 <!--Navbar -->
-<div class="p-1 fs-2 container-fluid mainnav">
-    <nav class="navbar-toggler navbar-expand-lg" style="height: 100px;">
-    <div class=" row align-items-end">
-      <div class="col m-2">
-        <a class="text-dark" href="/products"> <i class="fas fa-seedling f4fb fa-3x"></i>Baobab </a>
-      </div>
-      <div class="col">
-      
-      </div>
-    </div>
-    </nav>
-  
-    <nav class="navbar-toggler navbar-expand-lg">
-      <div class="row justify-content-between">
+<div class="container mainnav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky shadow-lg bg-body rounded">
+    <div class="container">
       <!--Profile Dropdown -->
-      <div class="col-4 dropdown">
+      <div class="col-lg-4 dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-user-astronaut f4fb fa-2x"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/login">Login</a></li>
-            <li><a class="dropdown-item" href="/create">Add Order</a></li>
-            <li><a class="dropdown-item" href="">Blog</a></li>
-            <li><a class="dropdown-item" href="">Sign Out</a></li>
+            <li><a class="dropdown-item" href="/create">Add Blog</a></li>
+            <li><a class="dropdown-item" href="/">Blog</a></li>
+            <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
           </ul>
       </div>
-      <div class="col-4" style="margin-right: 0;">
-        <a href="/cakes"><button type="button" class="btn btn-outline-primary"><h3>Bakery</h3></button></a>
-        <a href="/community"><button type="button" class="btn btn-outline-primary"><h3>Hub</h3></button></a>
+      <div class="float-end">
+        <div class="links">
+          <a href="/cakes">
+            <button type="button" class="btn btn-outline-success position-relative">
+              Bakery
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#52ff52" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+            </button>
+          </a>
+          <a href="/community">
+            <button type="button" class="btn btn-outline-success position-relative">
+              Hub
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#52ff52" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+          </button>
+          </a>
+        </div>
       </div>
-      </div>
-    </nav>
-  </div>   
+    </div>
+  </nav>
+</div>   

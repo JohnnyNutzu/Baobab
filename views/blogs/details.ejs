@@ -11,12 +11,12 @@
           </div>
           <div class="col-md-7">
             <div class="card-body">
-                <h5 class="text-center"><%= product.title %></h5>
-              <p class="card-text text-center"><%= product.description %></p>
+                <h5 class="text-center"><%= blog.title %></h5>
+              <p class="card-text text-center"><%= blog.description %></p>
               
-              <a href='/products/edit/'>Edit</a>
+              <a href='/blogs/edit/' class="btn">Edit</a>
               <%- include('../partials/deleteForm',
-                { url: `/products/${product.id}` }) %>
+                { url: `/blogs/${blog.id}` }) %>
             </div>
           </div>
         </div>
