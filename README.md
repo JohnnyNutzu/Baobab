@@ -8,10 +8,18 @@ Charity website, also works like a blog website, with Jwt Auth forms for users, 
 
 #Badges
 
+Install Node
 ```bash
 npm init
 ```
-
+Install Express and dependencies
+```bash
+npm install express
+```
+Start 
+```bash
+npm start
+```
 #Installation
 
 Node JS, MongoDB, Express
