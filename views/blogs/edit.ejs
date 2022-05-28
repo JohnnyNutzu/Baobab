@@ -4,7 +4,7 @@
 <body>
     <%- include('../partials/nav.ejs') %>
     <div>
-        <form action="/blogs/<%= blog.id  %>?_method=PUT " method="POST">
+        <form action="/blogs/<%= blog._id  %>?_method=PUT " method="POST">
             <label for="title">Blog Title</label>
             <input type="text" id="title" name="title" required>
             <label for="body">Blog Description</label>

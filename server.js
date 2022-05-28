@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const fs = require('fs')
 
 const mongoose = require('mongoose');
+const dbUri = 'mongodb+srv://Netflix:Netflix@cluster0.7n1lg.mongodb.net/Bakery?retryWrites=true&w=majority';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => console.log('connected to db'))

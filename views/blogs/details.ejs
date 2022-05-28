@@ -14,7 +14,7 @@
                 <h5 class="text-center"><%= blog.title %></h5>
               <p class="card-text text-center"><%= blog.description %></p>
               
-              <a href='/blogs/edit/' class="btn">Edit</a>
+              <a href='/blogs/<%= blog._id  %> /edit' class="btn">Edit</a>
               <%- include('../partials/deleteForm',
                 { url: `/blogs/${blog.id}` }) %>
             </div>

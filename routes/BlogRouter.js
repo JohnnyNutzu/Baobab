@@ -80,14 +80,15 @@ router.post("/", upload.single('img'), (req, res, next) => {
   });
 
 
-  router.put('/blogs/:id/edit', (req,res)=> {
+  router.put('blogs/:id/edit', (req,res)=> {
     let blog
     try {
     blog = Blog.findById(req.params.id)
     blog.title = req.body.title
     blog.description = req.body.description
+    blog.img = req.body.img
     blog.save()
-    res.redirect(`/blogs`)
+    res.redirect('/')
   } catch {
     if (blog == null) {
       res.redirect('/')
